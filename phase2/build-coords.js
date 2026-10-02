@@ -3,26 +3,27 @@
    build-coords.js — ぐるっとパスガイド用の座標テーブル生成（Phase 2）
 
    使い方：
-     1. このファイルを index.html と同じフォルダに置く
-     2. node build-coords.js
+     1. リポジトリのルートで実行する（入出力先はルート基準で解決されます）
+     2. NOMINATIM_CONTACT="https://example.com/contact" node phase2/build-coords.js
      3. coords.js と coords-review.md が出来る
      4. coords-review.md の指示に従って残りを手で埋める
-     5. もう一度 node build-coords.js（済んだ分は再問い合わせしません）
+     5. もう一度同じコマンドを実行（済んだ分は再問い合わせしません）
 
    データ元は OpenStreetMap / Nominatim（ODbL）。
    サイトに座標を載せる場合はフッター等に出典表記を入れてください：
      地図データ © OpenStreetMap contributors
 
    Nominatim の利用規約：秒1リクエストまで、User-Agent 必須。
-   下の CONTACT を自分の連絡先に書き換えてから実行してください。
+   実行者自身の連絡先（URL かメールアドレス）を NOMINATIM_CONTACT で必ず渡すこと。
+   既定値はありません（フォーク先の実行が PYOKO を名乗らないようにするため）。
    ========================================================================== */
 
 const fs = require('fs');
 const path = require('path');
 const vm = require('vm');
 
-const CONTACT = process.env.NOMINATIM_CONTACT || 'https://fengyu20.github.io/grutto-pass/';
-const UA = `grutto-pass-map/1.0 (${CONTACT})`;
+const UA_PRODUCT = 'pyoko-coords-builder/1.0';
+let UA = null;                               // main() で NOMINATIM_CONTACT から組み立てる
 const SLEEP_MS = 1100;                       // 規約は1req/s。余裕をみて1.1秒
 const NOMINATIM = 'https://nominatim.openstreetmap.org/search';
 const PROJECT_ROOT = path.resolve(__dirname, '..');
@@ -211,10 +212,18 @@ function loadExisting() {
 
 /* --- メイン ------------------------------------------------------------ */
 async function main() {
-  if (CONTACT === 'your-email@example.com') {
-    console.error('CONTACT を自分の連絡先に書き換えてから実行してください（Nominatim の規約）');
+  // ネットワーク問い合わせ・ファイル書き出しより前に必ず確認する
+  const contact = (process.env.NOMINATIM_CONTACT || '').trim();
+  if (!contact) {
+    console.error([
+      'NOMINATIM_CONTACT is required (Nominatim usage policy: identify the caller).',
+      'Set it to your own contact URL or email address, e.g.:',
+      '  NOMINATIM_CONTACT="https://example.com/contact" node phase2/build-coords.js',
+      'No requests were sent and no files were written.'
+    ].join('\n'));
     process.exit(1);
   }
+  UA = `${UA_PRODUCT} (${contact})`;
 
   const facilities = loadFacilities();
   const existing = loadExisting();

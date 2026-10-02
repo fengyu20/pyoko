@@ -10,6 +10,18 @@ for the procedure and the release checklist.
 Convention: every release bumps `CACHE_VERSION` in `sw.js`. The version in each heading
 is the value shipped by that release.
 
+## 2026-10-02 — Coordinate builder requires an explicit Nominatim contact
+
+First post-publication maintenance change. `phase2/build-coords.js` no longer
+falls back to the legacy grutto-pass GitHub Pages URL as its Nominatim contact.
+Maintainers must now supply `NOMINATIM_CONTACT`, so a fork does not identify
+itself to the public service as PYOKO. A missing or blank contact exits non-zero
+before any request or output write. The User-Agent is now
+`pyoko-coords-builder/1.0 (<contact>)`. Added a short regeneration note to the
+README and CLI regression tests. Coordinate data, runtime behaviour, the build
+allowlist and `CACHE_VERSION` are unchanged. This is a maintenance-tool change,
+not a release.
+
 ## 2026-09-29 — v126: M3B public licensing boundary
 
 Scoped the MIT grant to Yu-owned implementation and added separate terms for

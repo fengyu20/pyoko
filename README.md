@@ -283,6 +283,23 @@ in `sw.js` whenever an install-pre-cached shell asset changes, then check the
 production build and affected pages. Internal source acquisition and evidence
 review are maintained separately from this public development reference.
 
+### Regenerating coordinates
+
+`phase2/build-coords.js` is a maintenance-time Node CLI that geocodes facilities
+through the public OpenStreetMap Nominatim service. It is not browser runtime
+code and is excluded from the production build. Run it from the repository root
+with your own contact URL or email address:
+
+```bash
+NOMINATIM_CONTACT="https://example.com/contact" node phase2/build-coords.js
+```
+
+The contact is sent in the User-Agent to identify you, the maintainer running the
+tool, to the public service. There is no default: if `NOMINATIM_CONTACT` is
+missing or blank, the tool exits before sending any request or writing
+`coords.js` / `coords-review.md`. You remain responsible for following the
+Nominatim usage policy.
+
 ---
 
 ## Roadmap
