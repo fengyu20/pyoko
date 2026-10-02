@@ -1,0 +1,17 @@
+# OS / editor
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Node (for future validate/test scripts)
+node_modules/
+npm-debug.log*
+test-results/
+playwright-report/
+
+# Local scratch / temp
+*.local
+/tmp-*
+.cloudflare-dist/
+.canary-preview/

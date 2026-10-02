@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">PYOKO — unofficial guide for Tokyo Museum Grutto Pass</title>
+  <desc id="desc">PYOKO is an independent museum-hopping guide for Tokyo Museum Grutto Pass users.</desc>
+  <rect width="1200" height="630" fill="#143D33"/>
+  <path d="M79 472c126-68 250-68 377 0s250 68 377 0" fill="none" stroke="#2B594B" stroke-width="3"/>
+  <path d="M79 472c126-68 250-68 377 0" fill="none" stroke="#B7CF71" stroke-linecap="round" stroke-width="8"/>
+  <circle cx="79" cy="472" r="9" fill="#F28B78"/>
+  <circle cx="456" cy="472" r="9" fill="#B7CF71"/>
+  <text x="80" y="198" fill="#FFF9F0" font-family="Avenir Next, Trebuchet MS, Helvetica Neue, Arial, sans-serif" font-size="116" font-weight="800" letter-spacing="8">PY</text>
+  <text x="263" y="198" fill="#B7CF71" font-family="Avenir Next, Trebuchet MS, Helvetica Neue, Arial, sans-serif" font-size="116" font-weight="800" letter-spacing="8">O</text>
+  <text x="365" y="198" fill="#FFF9F0" font-family="Avenir Next, Trebuchet MS, Helvetica Neue, Arial, sans-serif" font-size="116" font-weight="800" letter-spacing="8">K</text>
+  <text x="500" y="198" fill="#F28B78" font-family="Avenir Next, Trebuchet MS, Helvetica Neue, Arial, sans-serif" font-size="116" font-weight="800" letter-spacing="8">O</text>
+  <path d="M610 93l24-9" fill="none" stroke="#B7CF71" stroke-linecap="round" stroke-width="8"/>
+  <text x="86" y="262" fill="#DCE1D6" font-family="Hiragino Sans, Noto Sans JP, Arial, sans-serif" font-size="27" letter-spacing="1">for 東京・ミュージアム ぐるっとパス</text>
+  <text x="86" y="309" fill="#C0C9BD" font-family="Avenir Next, Trebuchet MS, Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="600" letter-spacing="4">UNOFFICIAL · INDEPENDENT GUIDE</text>
+  <text x="86" y="410" fill="#FFF9F0" font-family="Hiragino Sans, Noto Sans JP, Arial, sans-serif" font-size="31">Explore one place, then the next.</text>
+</svg>

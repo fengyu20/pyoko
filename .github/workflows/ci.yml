@@ -1,0 +1,21 @@
+name: CI
+
+# GitHub に push した時点で自動で走る。まだ remote が無い場合はローカルの
+# `npm test` / `npm run validate` と同じ。依存ゼロなので install 不要。
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Unit tests (open-now / closure logic)
+        run: npm test
+      - name: Data validation (structure only; link-check is manual & warn-only)
+        run: npm run validate

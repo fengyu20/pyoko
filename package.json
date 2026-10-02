@@ -1,0 +1,20 @@
+{
+  "name": "gruttopass-guide",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ぐるっとパス 展覧会ガイド — static offline guide for Tokyo Grutto Pass museums",
+  "scripts": {
+    "build:pages": "node scripts/build-pages.js",
+    "build:pages:canary": "node scripts/build-pages.js --canary-preview",
+    "test": "node --test test/*.test.js",
+    "test:e2e": "playwright test",
+    "test:release": "npm test && npm run validate && npm run build:pages && npm run test:e2e",
+    "validate": "node scripts/validate-data.js && node scripts/validate-pass-benefits.js",
+    "validate:pass-benefits": "node scripts/validate-pass-benefits.js",
+    "validate:links": "node scripts/validate-data.js --check-links",
+    "i18n:report": "node scripts/validate-data.js --i18n-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.62.1"
+  }
+}

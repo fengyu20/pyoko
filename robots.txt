@@ -1,0 +1,91 @@
+# Grutto Pass 2026 guide (unofficial).
+#
+# For data and content reuse terms, see /DATA_AND_CONTENT_TERMS.md.
+
+# General public search
+# No Disallow rule here keeps the public runtime crawlable so ordinary search
+# engines can render and index the homepage. Internal review/source material is
+# excluded by the production build, not by robots.txt.
+User-agent: *
+Sitemap: https://pyoko.jp/sitemap.xml
+
+# AI search / discovery and user-directed retrieval — allowed
+# These providers document separate controls for search or user-requested
+# access. Allowing them is not consent to their training-oriented crawlers.
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Amzn-SearchBot
+Allow: /
+
+User-agent: Amzn-User
+Allow: /
+
+# Model training / model development — blocked
+# These provider-specific crawlers are documented as training-oriented or may
+# contribute to model development.
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+
+# Legacy / ambiguous training-oriented agents — blocked
+User-agent: anthropic-ai
+Disallow: /
+
+# Provider-specific mixed-purpose exception
+# These are data-use controls rather than page-fetch crawlers. Blocking them
+# preserves the no-training boundary where the provider's uses are not
+# separable through the current control.
+User-agent: Applebot-Extended
+Disallow: /
+
+# Applebot-Extended does not crawl pages; Applebot remains allowed above for
+# Apple search surfaces such as Siri, Spotlight, and Safari.
+
+User-agent: Google-Extended
+Disallow: /
+
+# Google-Extended also covers certain Gemini grounding uses, so this trades
+# away those uses to preserve the no-training boundary. Googlebot remains
+# allowed through the general public-search group above.
+
+# Other existing training / scraping / ambiguous agents — blocked
+# No separate official search or user-retrieval control has been established
+# for these agents in this policy review.
+User-agent: CCBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: meta-externalagent
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: omgili
+Disallow: /

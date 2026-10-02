@@ -1,0 +1,25 @@
+{
+  "name": "PYOKO for Tokyo Museum Grutto Pass",
+  "short_name": "PYOKO",
+  "description": "Unofficial guide for Tokyo Museum Grutto Pass",
+  "lang": "en",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "theme_color": "#143D33",
+  "background_color": "#F5F5F1",
+  "icons": [
+    {
+      "src": "assets/brand/pyoko-symbol-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/brand/pyoko-symbol-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
