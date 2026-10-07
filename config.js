@@ -7,7 +7,7 @@ const CONFIG = {
   // Pass の計算基準。表示文言ではなく数値としてロジックから参照する。
   passPriceYen: 2500,
   // Hero に表示する情報確認日。更新時はここも合わせて更新する。
-  lastUpdated: '2026-09-19',
+  lastUpdated: '2026-10-06',
 
   // 公式サイトは107の番号付き施設。No.36は2施設を収録するため、
   // このガイドのカード（実体）数は108件になる。
@@ -29,6 +29,13 @@ const CONFIG = {
       { id: 'edition-exhibition-list', type: 'exhibition-list', url: 'https://www.rekibun.or.jp/grutto/facilities/' }
     ],
     recommendations: [
+      {
+        id: '2026-10-06',
+        periodStart: '2026-10',
+        periodEnd: '2026-11',
+        admissionUrl: 'https://www.rekibun.or.jp/grutto/blog/20260930-6956/',
+        discountUrl: 'https://www.rekibun.or.jp/grutto/blog/20260930-6955/'
+      },
       {
         id: '2026-09-04',
         periodStart: '2026-09',

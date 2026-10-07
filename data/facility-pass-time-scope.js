@@ -252,14 +252,19 @@ const FACILITY_PASS_TIME_SCOPE = {
 
   '34': {
     classification: 'exhibition_scoped',
-    entitlement_mode: 'awaiting_schedule',
+    entitlement_mode: 'eligible_exhibitions',
     entitlement_baseline: '企画展入場',
     schedule_is_exhaustive: false,
-    // "※展示室修繕のため2026年秋まで休館予定。" — no eligible exhibition is announced
-    // and no later Grutto update names one, so availability stays unconfirmed.
+    // The Grutto edition list confirms an eligible window; the facility schedule
+    // independently owns the exhibition identity and dates.
     non_exhaustive_wording: '※展示室修繕のため2026年秋まで休館予定。',
     admission_time_scoped: true,
-    windows: [],
+    windows: [{
+      valid_from: '2026-11-14',
+      valid_to: '2027-03-22',
+      title: '関島寿子 かごについてのかご',
+      source_ref: 'grutto_exhibition_pdf_2026_01'
+    }],
     post_validity: 'unconfirmed'
   },
 
@@ -271,7 +276,8 @@ const FACILITY_PASS_TIME_SCOPE = {
     admission_time_scoped: true,
     windows: [
       { valid_from: '2026-04-25', valid_to: '2026-07-05', title: '企画展 ライトアップ木島櫻谷Ⅲ ―おうこくの色をさがしに', source_ref: 'grutto_exhibition_pdf_2026_01' },
-      { valid_from: '2026-08-29', valid_to: '2026-10-12', title: '特別展 没後100年記念 住友春翠 ―仕合わせの住友近代美術コレクション', source_ref: 'grutto_exhibition_pdf_2026_01', corroborated_by: ['grutto_blog_20260729'] }
+      { valid_from: '2026-08-29', valid_to: '2026-10-12', title: '特別展 没後100年記念 住友春翠 ―仕合わせの住友近代美術コレクション', source_ref: 'grutto_exhibition_pdf_2026_01', corroborated_by: ['grutto_blog_20260729'] },
+      { valid_from: '2026-11-03', valid_to: '2026-12-13', title: '特別展 唐物誕生', source_ref: 'grutto_exhibition_pdf_2026_01' }
     ],
     post_validity: 'unconfirmed'
   },

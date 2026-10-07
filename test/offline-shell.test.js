@@ -686,7 +686,7 @@ test('every same-origin script the shell loads is precached, in load order', () 
     assert.equal(shell.indexOf(runtime), shell.indexOf(data) + 1,
       `${runtime} must follow its data in the precache`);
   }
-  assert.match(sw, /grutto-pass-v126/);
+  assert.match(sw, /grutto-pass-v127/);
   assert.match(sw, /'\.\/facility-presentation-model\.js'/);
   assert.match(sw, /'\.\/manifest\.json'/);
   assert.match(sw, /'\.\/assets\/brand\/pyoko-symbol-192\.png'/);

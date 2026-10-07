@@ -33,6 +33,7 @@ test('Footer source data is grouped, machine-readable, and keeps historical reco
   assert.deepEqual(config.sources.core.map(source => source.id), ['grutto-official', 'facility-official-sites']);
   assert.deepEqual(config.sources.exhibitions.map(source => source.id), ['edition-exhibition-list']);
   assert.deepEqual(config.sources.recommendations.map(source => [source.periodStart, source.periodEnd]), [
+    ['2026-10', '2026-11'],
     ['2026-09', '2026-10'],
     ['2026-08', '2026-09'],
     ['2026-07', '2026-08']

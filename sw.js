@@ -1,5 +1,5 @@
 // Bump this on every release so clients discard stale data/shell.
-const CACHE_VERSION = 'grutto-pass-v126';
+const CACHE_VERSION = 'grutto-pass-v127';
 const SHELL_CACHE = `${CACHE_VERSION}-shell`;
 const TILE_CACHE = `${CACHE_VERSION}-tiles`;
 const APP_SHELL = new URL('./index.html', self.registration.scope).toString();

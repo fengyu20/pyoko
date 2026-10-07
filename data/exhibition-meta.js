@@ -20,6 +20,9 @@ const EXHIBITION_META = {
   "15::https://moriogai-kinenkan.jp/modules/news/index.php?page=article&storyid=750::鷗外、雑誌をつくる。": {
     validFrom: '2026-07-05', validTo: '2026-09-30', checkedAt: '2026-07-30'
   },
+  "15::https://moriogai-kinenkan.jp/modules/event/print.php?action=View&caldate=2026-11-15&cid=0&event_id=0000002534&smode=Daily::特別展「観潮楼歌会―鴎外の歌壇観測」": {
+    validFrom: '2026-10-10', validTo: '2027-01-11', checkedAt: '2026-10-06'
+  },
   "17::https://www.yamasa.com/musee/exhibitions/20260523-0802/index.html::浜口陽三と白倉嘉入展 満ちてくる光": {
     validFrom: '2026-05-23', validTo: '2026-08-02', checkedAt: '2026-07-30'
   },
@@ -289,5 +292,14 @@ const EXHIBITION_META = {
   // presented as current; the facility official event page is the current source.
   "98::https://ome-yoshikawaeiji.net/::青梅市吉川英治記念館×文豪とアルケミストPART Ⅵ Many thanks ～私たちと文アル～": {
     validFrom: '2026-07-18', validTo: '2026-11-29', checkedAt: '2026-09-04'
+  },
+  "34::https://www.musee-tomo.or.jp/exhibition/schedule.html::関島寿子 かごについてのかご": {
+    validFrom: '2026-11-14', validTo: '2027-03-22', checkedAt: '2026-10-06'
+  },
+  "35::https://sen-oku.or.jp/program/t_202611_karamono/::特別展 唐物誕生―茶の湯デザインの源流をさぐる": {
+    validFrom: '2026-11-03', validTo: '2026-12-13', checkedAt: '2026-10-06'
+  },
+  "36-2::https://www.mori.art.museum/jp/exhibitions/marikomori/index.html::森万里子：燦燦": {
+    validFrom: '2026-10-31', validTo: '2027-03-28', checkedAt: '2026-10-06'
   }
 };

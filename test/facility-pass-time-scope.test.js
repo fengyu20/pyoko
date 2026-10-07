@@ -68,11 +68,10 @@ test('post-window availability is unconfirmed, never none_confirmed', () => {
   assert.equal(api.resolvePassAdmissionAvailability(empty, '2026-08-15'), 'unconfirmed');
 });
 
-test('facilities with no confirmed windows are never available', () => {
-  // No.34 智美術館 is closed for renovation and no Grutto source names an
-  // eligible exhibition, so it carries no window at all.
-  assert.equal(availability('34', '2026-08-15'), 'unconfirmed');
-  assert.equal(api.getPassTimeScope(facilityByKey('34')).windows.length, 0);
+test('No.34 confirmed November window stays upcoming until its eligibility start', () => {
+  assert.equal(availability('34', '2026-08-15'), 'upcoming');
+  assert.equal(availability('34', '2026-11-14'), 'available');
+  assert.equal(api.getPassTimeScope(facilityByKey('34')).windows.length, 1);
 });
 
 /* -------------------------------------------------------------------------
