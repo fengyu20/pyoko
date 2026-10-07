@@ -2,6 +2,10 @@
 
 Tracks releases and the reasoning behind them. Newest first.
 
+## 2026-10-07 — v127: October–November curated data refresh
+
+Added the October–November admission and discount recommendation sources while preserving prior history, with `CONFIG.lastUpdated` kept at `2026-10-06`. Published the confirmed exhibition details for No.15, No.34, No.35, and No.36-2. The required No.34 and No.35 Pass windows retain their separate Grutto-owned titles and sources; No.36-2 keeps its fixed ¥200 discount. No.1 remains provisional amid a source conflict, ICC No.58 remains provisional, No.71's open-day exception remains unmodeled, No.89 and No.11 remain unverified, and No.36-2's overnight-hours exception remains unencoded. Install-pre-cached data advances public cache v126 to v127. Node tests passed (327/327), validation reported no errors and two existing past-closure warnings, and the production build passed (9 facility pages / 80 files). The browser release gate is blocked in this environment because Playwright 1.62.1 requires Node 20 and only Node 18.19.1 is available; Chromium, WebKit, and targeted card browser acceptance are pending independent capable-environment review.
+
 Entries retain accepted product changes and the rationale that explains them.
 Private review and execution records are maintained separately.
 Data-only monthly updates are recorded here too; see `README.md` → *Monthly data maintenance*

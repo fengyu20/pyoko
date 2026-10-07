@@ -212,6 +212,7 @@ window.EXHIBITION_LINKS = {
  * a human already classified there does not need a second declaration.
  */
 window.EXHIBITION_LINK_TYPES = {
+  'https://www.musee-tomo.or.jp/exhibition/schedule.html': 'listing',
   // Verified 2026-08-16: a page for 「怖い」本 alone, not a schedule index.
   'https://toyo-bunko.or.jp/museum-exhibition/2631': 'exact',
   // Verified 2026-08-16: the museum's exhibition index, several exhibitions.
